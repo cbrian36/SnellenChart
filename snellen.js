@@ -1,11 +1,11 @@
 //here is where we will store the height of 1cm
 var viewingWindow = [
     // display name , number of pixels in 1cm
-    ["Fujitsu-Win", 95.2], // also 45.72 viewing distance
-    ["Chrome-Win", 79.9],
-    ["Edge-Win", 69.7],
-    ["iPhone 13", 132.3 ], // also 27.94 viewing distance
-    ["iPad pro 12.9", 104.1],
+    ["Fujitsu-Win", 95.2, 45.72], // also 45.72 viewing distance
+    ["Chrome-Win", 79.9, 45.72], // FIX THIS viewing distance
+    ["Edge-Win", 69.7, 45.72], // FIX THIS viewing distance
+    ["iPhone 13", 123, 29.21], // also 27.94 viewing distance
+    ["iPad pro 12.9", 29.21], // FIX THIS viewing distance
 ];
 
 
@@ -205,7 +205,7 @@ function initialize() {
 
     // distanceInputDef is your viewing distance value, in cm. Set your default
     // to something close to laptop viewing distance.
-    distanceInputDef = getCookie("distanceInputDef", 45.72);
+    distanceInputDef = getCookie("distanceInputDef", viewingWindow[sizeSelectDef][2]);
 
     // set html element to the corresponding js variable value
     sizeSelect.value = sizeSelectDef;
