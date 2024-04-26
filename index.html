@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Web Snellen</title>
@@ -10,8 +11,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="manifest" href="site.webmanifest">
   <script data-goatcounter="https://acsnellenchart.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script> 
+          async src="//gc.zgo.at/count.js"></script>
 </head>
+
 <body>
     <div id="options">
       <div id="sizeOption">
@@ -87,6 +89,7 @@
 </body>
 
 <script src="snellen.js"></script>
+
 <style>
     @font-face {
     font-family: "optotype";
@@ -125,57 +128,58 @@
         
     }
 
-  #options {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
+    #options {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
 
 
     select, input {
         border: 1px solid black;
     }
 
-  #fixHeight {
-    display: none;
-  }
-  button {
-      font-family: optotype;
-      color: grey;
-  }
+    #fixHeight {
+      display: none;
+    }
+    button {
+        font-family: optotype;
+        color: grey;
+    }
 
-  .jw-modal {
-    /* modals are hidden by default */
-    display: none;
-
-    /* modal container fixed across whole screen */
-    position: fixed;
-    inset: 0;
-
-    /* z-index must be higher than everything else on the page */
-    z-index: 10000;
-    
-    /* semi-transparent black background exposed by padding */
-    background-color: rgba(0, 0, 0, .75);
-    padding: 40px;
-
-    /* enables scrolling for tall modals */
-    overflow: auto;
-  }
+    .jw-modal {
+        /* modals are hidden by default */
+        display: none;
   
-  .jw-modal.open {
-      display: block;
-  }
+        /* modal container fixed across whole screen */
+        position: fixed;
+        inset: 0;
   
-  .jw-modal-body {
-      padding: 20px;
-      background: #fff;
-  }
+        /* z-index must be higher than everything else on the page */
+        z-index: 10000;
+        
+        /* semi-transparent black background exposed by padding */
+        background-color: rgba(0, 0, 0, .75);
+        padding: 40px;
   
-  body.jw-modal-open {
-      /* body overflow is hidden to hide main scrollbar when modal is open */
-      overflow: hidden;
-  }
+        /* enables scrolling for tall modals */
+        overflow: auto;
+    }
+  
+    .jw-modal.open {
+        display: block;
+    }
+  
+    .jw-modal-body {
+        padding: 20px;
+        background: #fff;
+    }
+  
+    body.jw-modal-open {
+        /* body overflow is hidden to hide main scrollbar when modal is open */
+        overflow: hidden;
+    }
 
 </style>
+
 </html>
