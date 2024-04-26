@@ -1,10 +1,10 @@
 //here is where we will store the height of 1cm
 var viewingWindow = [
     // display name , number of pixels in 1cm
-    ["Fujitsu-Win", 95.2],
+    ["Fujitsu-Win", 95.2], // also 45.72 viewing distance
     ["Chrome-Win", 79.9],
     ["Edge-Win", 69.7],
-    ["iPhone 14", 119.7 ],
+    ["iPhone 13", 132.3 ], // also 27.94 viewing distance
     ["iPad pro 12.9", 104.1],
 ];
 
@@ -113,6 +113,12 @@ scaleInput.addEventListener("keydown", (e) => {
 });
 scaleInput.addEventListener("change", (event) => {
     changeCSS(scaleInput.value, distanceInput.value, SnellenSizeDesired);
+});
+// make it so pressing enter removes keyboard focus from the input element
+  currentHeightInput.addEventListener("keydown", (e) => {
+    if (e.keyCode === 13) {
+      scaleInput.blur();
+    }
 });
 currentHeightInput.addEventListener("change", (event) => { 
     fixHeight();
