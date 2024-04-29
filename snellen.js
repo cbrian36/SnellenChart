@@ -181,6 +181,10 @@ function changeWithKey(e){
     if(e.code == "ArrowUp"){
         increaseSize();
     }
+    if (e.code == "Space") {
+        // hide letter
+        spaceFunction();
+    }
 }
 
 function createSelection(){
@@ -227,6 +231,17 @@ function changeLetter(){
     //letterE.innerHTML = letterOptions[currentLetter];
     letterE.innerHTML = wordOptions[currentLetter];
 }
+
+function spaceFunction() {
+    hide();
+    changeLetter();
+}
+// hide the text and then on reappearance call changeLetter
+function hide() {
+    // let's try some CSS
+    letterE.style.display = (letterE.style.display === 'none') ? 'block' : 'none';
+}
+
 function decreaseSize(){
     if (SnellenSizeDesired < lenSnellen - 1){
         SnellenSizeDesired += 1;
